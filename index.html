@@ -8,114 +8,9 @@
 
     <!-- ✅ Favicon -->
     <link rel="icon" href="assets/favicon.png" type="image/png">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-            background-color: #f8fafc;
-        }
-
-        .code-font {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .gradient-bg {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .skill-badge {
-            transition: all 0.3s ease;
-        }
-
-        .skill-badge:hover {
-            transform: scale(1.05);
-        }
-
-        .terminal {
-            background-color: #1e293b;
-            border-radius: 0.5rem;
-            padding: 1rem;
-            color: #e2e8f0;
-            font-family: 'JetBrains Mono', monospace;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-
-        .terminal-header {
-            display: flex;
-            margin-bottom: 0.5rem;
-        }
-
-        .terminal-button {
-            height: 12px;
-            width: 12px;
-            border-radius: 50%;
-            margin-right: 6px;
-        }
-
-        .terminal-red {
-            background-color: #ef4444;
-        }
-
-        .terminal-yellow {
-            background-color: #f59e0b;
-        }
-
-        .terminal-green {
-            background-color: #10b981;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 10px;
-            height: 1.2em;
-            background-color: #e2e8f0;
-            animation: blink 1s step-end infinite;
-            vertical-align: text-bottom;
-            margin-left: 2px;
-        }
-
-        @keyframes blink {
-            from, to {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #3b82f6;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .active::after {
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -270,6 +165,8 @@
                             <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">JWT</span>
                             <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">MongoDB</span>
                             <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Benie</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Docker</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Coolify PaaS</span>
                         </div>
                         <button class="text-blue-600 hover:text-blue-800 font-medium flex items-center" onclick="toggleProjectDetails('project1')">
                             Technical Details
@@ -283,6 +180,40 @@
                                 <li>Rate limiting to prevent abuse</li>
                                 <li>Centralized logging with Loguru</li>
                                 <li>API documentation with Swagger</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden project-card transition duration-300">
+                    <div class="h-48 bg-white flex items-center justify-center">
+                        <img src="assets/horizon.png" alt="icon" class="object-contain" style="width: 100%; height: 100%;"/>
+                    </div>                    
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Horizon: Farmer Digital Education LMS</h3>
+                        <p class="text-gray-600 mb-4">A custom-built Learning Management System (LMS) designed to empower farmers through structured digital education, expert consultation, and automated learning progress tracking.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Strapi CMS</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">TypeScript</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">PostgreSQL</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Docker</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Coolify PaaS</span>
+                        </div>
+                        <button class="text-blue-600 hover:text-blue-800 font-medium flex items-center" onclick="toggleProjectDetails('projectHorizon')">
+                            Technical Details
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform transition-transform" id="projectHorizon-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="mt-4 hidden" id="projectHorizon">
+                            <ul class="list-disc pl-5 text-gray-700 text-sm">
+                                <li>Custom content models for Modules, Materials, Categories, User Progress, Expert Profiles, and Appointments.</li>
+                                <li>Dynamic Zone implementation for flexible content creation within learning materials.</li>
+                                <li>Role-based access control (RBAC) for Admin and User (Farmer) roles.</li>
+                                <li>Automated learning progress tracking and percentage calculation.</li>
+                                <li>API-first architecture ready for web and mobile front-end integration.</li>
+                                <li>Scalable deployment using Docker and Coolify PaaS.</li>
                             </ul>
                         </div>
                     </div>
@@ -574,83 +505,13 @@
                     <a href="https://www.linkedin.com/in/fakhrinash/" class="text-gray-400 hover:text-white transition">
                         <i class="fab fa-linkedin-in text-lg"></i>
                     </a>
+                    <a href="https://medium.com/@fakhrin3107" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-medium-m text-lg"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            menuToggle?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
-        
-            // Smooth scrolling
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', e => {
-                    e.preventDefault();
-                    const target = document.querySelector(anchor.getAttribute('href'));
-                    if (target) {
-                        window.scrollTo({
-                            top: target.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        mobileMenu?.classList.add('hidden');
-                    }
-                });
-            });
-        
-            // Form submission
-            const contactForm = document.getElementById('contact-form');
-            const formMessage = document.getElementById('form-message');
-            contactForm?.addEventListener('submit', e => {
-                e.preventDefault();
-                setTimeout(() => {
-                    formMessage?.classList.remove('hidden');
-                    contactForm.reset();
-                    setTimeout(() => formMessage?.classList.add('hidden'), 5000);
-                }, 1000);
-            });
-        
-            // Typing animation
-            const typingText = document.querySelector('.typing-text');
-            if (typingText) {
-                const text = typingText.textContent;
-                typingText.textContent = '';
-                let i = 0;
-                (function type() {
-                    if (i < text.length) {
-                        typingText.textContent += text[i++];
-                        setTimeout(type, 100);
-                    }
-                })();
-            }
-        
-            // Scrollspy for navigation
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-link');
-            window.addEventListener('scroll', () => {
-                let currentId = '';
-                const scrollY = window.pageYOffset;
-        
-                sections.forEach(section => {
-                    if (scrollY >= section.offsetTop - 100) {
-                        currentId = section.id;
-                    }
-                });
-        
-                navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
-                });
-            });
-        });
-        
-        // Toggle project details
-        function toggleProjectDetails(id) {
-            document.getElementById(id)?.classList.toggle('hidden');
-            document.getElementById(`${id}-icon`)?.classList.toggle('rotate-180');
-        }
-        </script>
     </body>
+    <script src="js/script.js"></script>
 </html>
